@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <form [formGroup] = "angForm" (ngSubmit)="onSubmit()">
+      <input formControlName="name" />
+
+            <button type="submit">Send</button>
+    </form>
+  </div>
+  <table class = "table-striped table-bordered table-hover table-condensed">
+    <tr *ngFor="let album of albums">
+      <td>{{ album.title}} </td>
+      <td>{{ album.releaseDate}} </td>
+      <td><img src="{{album.img}}"> </td>
+  </table>
+</div>
